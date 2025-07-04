@@ -1,8 +1,6 @@
 const dbConfig = {
   DB_NAME: "wanderlust",
-  DB_URL: "mongodb://127.0.0.1:27017/wanderlust",
-  DB_URL_COLLAB: "mongodb+srv://opiocharles2563:d9zRi5JjChBNI32V@cluster0.wybjr4v.mongodb.net/",
-  db_url: process.env.ATLASDB_URL,
+  DB_URL: "mongodb+srv://parmarayush1816:NN2zpS5Ig1NX2arE@cluster0.zmpzv7x.mongodb.net/?retryWrites=true&w=majority&ssl=true&appName=Cluster0",
 };
 
 export { dbConfig };

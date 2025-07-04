@@ -2,7 +2,7 @@ import { dbConfig } from "./configs/db.config.js";
 import mongoose from "mongoose";
 
 async function dbConnect() {
-  return await mongoose.connect(dbConfig.DB_URL_COLLAB);
+  return await mongoose.connect(dbConfig.DB_URL);
 }
 
 dbConnect()
