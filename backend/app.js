@@ -1,10 +1,9 @@
-import bodyParser from "body-parser";
-import "dotenv/config";
 import express from "express";
+import bodyParser from "body-parser";
 import mongoose from "mongoose";
 import cors from "cors";
 
-import { dbConnect } from "./connection.js";
+import { dbConnect } from "./configs/connection.js";
 import { customerRoute } from "./routes/customer.js";
 
 const port = 3000;
