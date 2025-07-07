@@ -16,4 +16,13 @@ async function getCustomers(req, res) {
   });
 }
 
-export { addNewCustomer, getCustomers };
+async function deleteCustomer(req, res) {
+  const id = req.params.id;
+  const customers = await customerModel.findByIdAndDelete(id);
+  console.log(customers);
+  res.status(200).json({
+    message: "Customer deleted successfully",
+  });
+}
+
+export { addNewCustomer, getCustomers, deleteCustomer };
