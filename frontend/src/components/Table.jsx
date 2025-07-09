@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const Table = () => {
   const [customers, setCustomers] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/customer");
+        const response = await axios.get("http://localhost:3000/customer");
         console.log(response);
         setCustomers(response.data.customers || []);
       } catch (error) {
@@ -21,9 +22,7 @@ const Table = () => {
       <div className="container mt-5 ">
         <div className="d-flex justify-content-between mb-4">
           <h1>Customer Management System</h1>
-          <button type="submit" className="btn btn-primary fw-bold">
-            Add New Customer
-          </button>
+          <Link to="/add" className="btn btn-primary fw-bold d-flex align-items-center">Add New Customer</Link>
         </div>
         <table className="table table-striped table-hover">
           <thead className="table-light">

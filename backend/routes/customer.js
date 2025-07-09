@@ -1,6 +1,6 @@
 import express from "express";
 import {addNewCustomer,deleteCustomer,getCustomers,} from "../controllers/customer.js";
-import { wrapAsync } from "../utils/wrapAsync.js";
+import { wrapAsync } from "../utils/WrapAsync.js";
 const router = express.Router();
 
 // Here, we use wrapAsync as a higher-order function that takes a function (fn) as an argument.
