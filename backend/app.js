@@ -7,7 +7,10 @@ import { dbConnect } from "./configs/dbConnection.js";
 const port = 3000;
 const app = express();
 const db = dbConnect();
-app.use(cors());
+app.use(cors({
+  origin: "http://localhost:5173",
+  credentials: true
+}));
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
